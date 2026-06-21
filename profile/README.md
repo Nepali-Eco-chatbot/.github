@@ -7,5 +7,5 @@ Welcome to Nepali Eco-Chatbot project!
 | ![ Prajwal Bhandari's image](image/prajwalbhandari.jpeg) | Prajwal Bhandari| Mentee for the project. Learner, creator & changemaker|
 | ![Tanuj Shah's image](image/Tanuj.jpeg)               | Tanuj Shah        | Mentee for the project. Tech & Finance enthusiast            |
 | ![Aaditya Gaire's image](image/aadityagaire.jpg)      | Aaditya Gaire     | Mentee for the project, STEM enthusiast, Student             | 
-| ![Anurag's image](image/anuragkdl.jpg)      | Anurag Kandel     | Mentee for the project, STEM enthusiast, Learner             | 
+| ![Anurag's image](image/anuragkdl.jpeg)      | Anurag Kandel     | Mentee for the project, STEM enthusiast, Learner             | 
 
