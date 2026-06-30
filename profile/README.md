@@ -8,5 +8,5 @@ Welcome to Nepali Eco-Chatbot project!
 | ![Tanuj Shah's image](image/Tanuj.jpeg)               | Tanuj Shah        | Mentee for the project. Tech & Finance enthusiast            |
 | ![Aaditya Gaire's image](image/aadityagaire.jpg)      | Aaditya Gaire     | Mentee for the project, STEM enthusiast, Student             | 
 | ![Anurag's image](image/anuragkdl.jpeg)      | Anurag Kandel     | Mentee for the project, STEM enthusiast, Learner             | 
-| ![Akash's image](akashsingh.jpg) | Akash Singh | Mentee for the project Literary and tech enthusiast |
+| ![Akash's image](image/akashsingh.jpg) | Akash Singh | Mentee for the project Literary and tech enthusiast |
 
