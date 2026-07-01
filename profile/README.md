@@ -9,3 +9,4 @@ Welcome to Nepali Eco-Chatbot project!
 | ![Aaditya Gaire's image](image/aadityagaire.jpg)      | Aaditya Gaire     | Mentee for the project, STEM enthusiast, Student             | 
 | ![Anurag's image](image/anuragkdl.jpeg)      | Anurag Kandel     | Mentee for the project, STEM enthusiast, Learner             | 
 | ![Shriya Shrestha's image](image/shriya.jpg) | Shriya Shrestha | Mentee for the project, Tech enthusiast |         
+| ![Dikshit's image](https://github.com/AKITO009.png) | Dikshit Sapkota| Mentee for the project, Grade 12 CS Student & Cybersecurity Enthusiast |
