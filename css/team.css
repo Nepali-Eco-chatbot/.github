@@ -12,7 +12,7 @@
   z-index:0;
   pointer-events:none;
 }
-.team-decor.top-left{ top:-40px; left:-40px; width:280px; opacity:0.9; }
+.team-decor.top-left{ top:-40px; left:-40px; width:280px; opacity:0.9; z-index:2; }
 .team-decor.line{ top:0; right:0; width:60%; opacity:0.5; }
 .team-section .container{ position:relative; z-index:1; }
 .team-section .section-eyebrow{ font-size:2.4rem; }
