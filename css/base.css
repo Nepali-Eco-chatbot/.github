@@ -85,23 +85,31 @@ button{ font-family:inherit; cursor:pointer; }
   color:var(--ink-900);
 }
 
-* ---------- Outline Button (Rounded Rectangle) ---------- */
+/* ---------- Outline Button (Rounded Rectangle) ---------- */
 .btn-outline {
   background: transparent;
-  border-radius: 8px;
   
-  /* The Fix: Hardcoding the colors without variables */
-  border: 1px solid rgba(255, 255, 255, 0.4); /* A soft, 40% transparent white border */
-  color: #ffffff; /* Pure white text */
+  /* THE FIX: Bringing the radius down from 9999px to 8px 
+     creates the perfect rounded rectangle from your design */
+  border-radius: 8px; 
   
-  transition: all 0.3s ease;
+  /* A crisp, slightly soft border to match the image exactly */
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  color: #ffffff; 
+  
+  /* Keeping our smooth transition for a premium feel */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-outline:hover {
+  /* On hover, the background fills slightly and the border brightens */
   background: rgba(255, 255, 255, 0.1); 
-  border-color: #ffffff; /* The border turns solid white on hover! */
+  border-color: #ffffff; 
   color: #ffffff;
-  transform: translateY(-2px);
+  
+  /* The button still gets that nice tactile lift! */
+  transform: translateY(-2px); 
+}
 
 
 .btn-outline-dark:hover{ background:rgba(15,30,24,0.06); }
@@ -116,14 +124,25 @@ button{ font-family:inherit; cursor:pointer; }
 
 /* ---------- Generic section shell ---------- */
 .section{ padding:100px 0; }
-.section-cream{ background:var(--cream-100); }
-.section-eyebrow{
-  text-align:center;
-  font-family:var(--font-serif);
-  font-weight:600;
-  font-size:2.1rem;
-  margin:0 0 56px;
-  color:var(--ink-900);
+/* THE FIX: Matching the bottom color of the Hero section so they blend seamlessly */
+.section-cream { 
+  background: var(--cream-200); 
+}
+
+/* ---------- Generic section shell ---------- */
+.section-eyebrow {
+  text-align: center;
+  
+  /* The "Why": Applying our official brand font for all major headings */
+  font-family: 'Outfit', sans-serif; 
+  font-weight: 600;
+  
+  /* Bumping up the size to match the prominence in your mockup */
+  font-size: 2.8rem; 
+  margin: 0 0 64px; /* Increased bottom margin for better breathing room */
+  
+  /* Using the Deep Forest brand color */
+  color: #0b1a13; 
 }
 
 /* ---------- Shared brand lockup (navbar + footer) ---------- */
@@ -137,8 +156,22 @@ button{ font-family:inherit; cursor:pointer; }
   color:#fff;
 }
 .brand .brand-accent{ color:var(--mint-400); font-weight:600; }
-.brand-mark{
-  width:36px; height:36px;
-  display:grid; place-items:center;
+/* ---------- Shared brand lockup (navbar + footer) ---------- */
+/* ---------- Shared brand lockup (navbar + footer) ---------- */
+.brand-mark {
+  /* Keeping your original Figma dimensions! */
+  width: 296px; 
+  height: 68px;
+  
+  display: flex; 
+  align-items: center;
+  
+  /* The browser is still forbidden from squishing this */
+  flex-shrink: 0; 
 }
-.brand-mark img{ width:100%; height:100%; object-fit:contain; }
+
+.brand-mark img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+}

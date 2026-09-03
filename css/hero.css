@@ -1,15 +1,36 @@
 /* =========================================================
    hero.css — hero section + phone chat mockup
    ========================================================= */
-
-.hero{
-  position:relative;
+.hero {
+  position: relative;
+  
+  /* THE FIX: We keep the green radial glow, but change the base to a solid cream-100 
+     so it perfectly matches the Features section below it. */
   background:
     radial-gradient(900px 500px at 78% 20%, rgba(46,204,130,0.14), transparent 60%),
-    linear-gradient(180deg, var(--cream-100), var(--cream-200));
-  color:var(--ink-900);
-  overflow:hidden;
-  padding:96px 0 120px;
+    var(--cream-100);
+    
+  color: var(--ink-900);
+  overflow: hidden;
+  padding: 96px 0 120px;
+}
+/* =========================================================
+   hero.css — Phone SVG Scaling & Aspect Ratio Protection
+   ========================================================= */
+
+.hero-phone-mockup {
+  /* THE FIX: We define the primary desktop width from your design (362px). 
+     The SVG's internal viewBox will automatically scale the height to 689px. */
+  width: 100%;
+  max-width: 362px;
+  height: auto;
+  
+  /* Tells the browser to respect the vector's native ratio perfectly */
+  aspect-ratio: 362 / 689;
+  object-fit: contain;
+  
+  /* Adds a soft, premium floating shadow behind the vector display */
+  filter: drop-shadow(0 25px 50px rgba(11, 26, 19, 0.15));
 }
 .hero .container{
   display:grid;

@@ -9,11 +9,13 @@
   background:var(--paper-white);
   border-bottom:1px solid var(--line-dark);
 }
-.navbar .container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  height:82px;
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* THE FIX: Updated to match your exact Figma navbar height */
+  height: 80px; 
 }
 
 .navbar .brand{ color:var(--ink-900); }
@@ -67,4 +69,27 @@
   .nav-links.open{ display:flex; }
   .nav-toggle{ display:flex; }
   .nav-actions .btn{ display:none; }
+}
+
+/* =========================================================
+   JavaScript-Powered Scroll-Hide Navbar (Desktop Only)
+   ========================================================= */
+
+@media (min-width: 981px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* Smooth transition for the slide effect */
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(0); /* Default: fully visible */
+  }
+
+  /* When JavaScript adds this class, the navbar slides upward out of view */
+  .navbar.nav-hidden {
+    transform: translateY(-100%);
+  }
 }
