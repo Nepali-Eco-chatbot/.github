@@ -9,7 +9,7 @@
 }
 .team-decor{
   position:absolute;
-  z-index:0;
+  z-index:-5;
   pointer-events:none;
 }
 .team-decor.top-left{ top:-40px; left:-40px; width:280px; opacity:0.9; }

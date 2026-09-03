@@ -1,49 +1,129 @@
 /* =========================================================
+
    footer.css — site footer
+
    ========================================================= */
 
+
+
 .footer{
+
   background:var(--forest-900);
+
   color:rgba(255,255,255,0.7);
-  padding:60px 0 30px;
+
+  padding:0px 0 0%;
+
 }
+
 .footer .container{
+
   display:grid;
+
   grid-template-columns:1.4fr 1fr 1fr 1fr;
+
   gap:36px;
+
+  /* Fix: This creates the crisp grey line EXACTLY as seen in your screenshot */
+  border-top: 1px solid rgba(255, 255, 255, 0.08); 
+  padding-top: 60px; /* Space between the line and the links */
+
 }
-.footer .brand{ margin-bottom:10px; }
+
+* Fixing the Logo Container */
+.footer .brand {
+  display: inline-block;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.footer-logo {
+  height: 20px; /* Reduced this number to make it perfectly compact! */
+  width: auto;  
+  display: block;
+  max-width: 100%; 
+}
+
 .footer-tagline{ font-size:0.85rem; color:rgba(255,255,255,0.45); max-width:230px; line-height:1.6; }
+
 .footer h4{
+
   color:#fff;
+
   font-size:0.92rem;
+
   margin:0 0 16px;
+
   font-weight:600;
+
 }
+
 .footer ul li{ margin-bottom:10px; }
+
 .footer ul li a{ font-size:0.88rem; color:rgba(255,255,255,0.6); transition:color .15s; }
+
 .footer ul li a:hover{ color:var(--mint-400); }
+
 .footer-socials{ display:flex; gap:12px; margin-bottom:14px; }
+
 .footer-socials a{
+
   width:32px; height:32px; border-radius:50%;
+
   background:rgba(255,255,255,0.08);
+
   display:grid; place-items:center;
+
   font-size:0.85rem;
+
+} 
+
+.footer-bottom {
+  margin-top: 0px; /* Reduced slightly since the border is gone */
+  padding: 24px 0 32px;
+  
+  /* Fix 1: This removes the line completely! */
+  border-top: none; 
+  
+  /* Fix 2: Flexbox guarantees it stays in a beautiful single line */
+  display: flex;
+  align-items: center; /* Vertically centers the text and the link */
+  flex-wrap: wrap; /* Pro-tip: If someone views this on a tiny mobile phone, this allows it to wrap instead of breaking the screen */
+  gap: 4px; /* Adds a tiny, consistent space between the copyright text and the Terms link */
+  
+  text-align: left; 
+  font-size: 0.8rem;
+  color: var(--text-muted); /* Our brand's soft text color */
 }
-.footer-bottom{
-  margin-top:46px;
-  padding-top:24px;
-  border-top:1px solid rgba(255,255,255,0.08);
-  text-align:center;
-  font-size:0.8rem;
-  color:rgba(255,255,255,0.4);
+
+/* ---------- Footer Bottom Links ---------- */
+.footer-bottom a.footer-link {
+  color: var(--text-muted); /* Keeps it seamlessly blended with the copyright text */
+  text-decoration: underline; /* A subtle underline shows it's clickable */
+  text-decoration-color: rgba(163, 196, 188, 0.3); /* Makes the underline very faint */
+  text-underline-offset: 4px; /* Pushes the underline slightly down for a cleaner look */
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Premium Tactile Hover */
+.footer-bottom a.footer-link:hover {
+  color: var(--primary-green); /* Highlights in our Emerald brand color */
+  text-decoration-color: var(--primary-green); /* The underline turns green too! */
 }
 
 @media (max-width: 980px){
+
   .footer .container{ grid-template-columns:1fr 1fr; }
+
 }
 
+
+
 @media (max-width: 720px){
+
   .footer .container{ grid-template-columns:1fr; text-align:center; }
+
   .footer-socials{ justify-content:center; }
-}
+
+} 
+

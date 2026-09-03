@@ -77,18 +77,33 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .btn-primary:hover{ box-shadow:0 14px 30px rgba(46,204,130,0.45); transform:translateY(-1px); }
 
-.btn-outline{
-  background:transparent;
-  border-color:rgba(255,255,255,0.35);
-  color:#fff;
-}
-.btn-outline:hover{ background:rgba(255,255,255,0.08); }
+
 
 .btn-outline-dark{
   background:transparent;
   border-color:rgba(15,30,24,0.3);
   color:var(--ink-900);
 }
+
+* ---------- Outline Button (Rounded Rectangle) ---------- */
+.btn-outline {
+  background: transparent;
+  border-radius: 8px;
+  
+  /* The Fix: Hardcoding the colors without variables */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* A soft, 40% transparent white border */
+  color: #ffffff; /* Pure white text */
+  
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1); 
+  border-color: #ffffff; /* The border turns solid white on hover! */
+  color: #ffffff;
+  transform: translateY(-2px);
+
+
 .btn-outline-dark:hover{ background:rgba(15,30,24,0.06); }
 
 .btn-solid-dark{
