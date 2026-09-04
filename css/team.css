@@ -41,23 +41,15 @@
 .team-decor.line{ top:0; right:0; width:60%; opacity:0.5; }
 .team-section .container{ position:relative; z-index:1; }
 .team-section .section-eyebrow {
-  /* Branding: Using our premium heading font */
-  font-family: 'Outfit', sans-serif;
+  /* THE FIX: Deleted the font-family line from here as well! */
   font-size: 2.8rem; 
-  
-  /* THE FIX: Forcing the text to center perfectly inside the container */
   text-align: center;
   width: 100%;
   display: block;
-  
-  /* Spacing */
   margin-top: 60px; 
   margin-bottom: 72px; 
-  
-  /* Layering: Keeps text clickable and above the vines */
   position: relative;
   z-index: 2; 
-  
   color: var(--ink-900);
 }
  .team-grid {

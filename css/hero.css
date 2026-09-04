@@ -38,22 +38,39 @@
   gap:48px;
   align-items:center;
 }
-.hero-copy h1{
-  font-family:var(--font-serif);
-  font-size:2.9rem;
-  line-height:1.15;
-  font-weight:600;
-  margin:0 0 22px;
-  letter-spacing:-0.01em;
-  color:var(--ink-900);
+
+/* ---------- 1. Hero Text Container ---------- */
+.hero-copy {
+  /* THE FIX: Adds breathing room directly above the text, pushing it down slightly */
+  padding-top: 100px; 
 }
-.hero-copy p{
-  font-size:1.05rem;
-  line-height:1.7;
-  color:var(--ink-600);
-  max-width:480px;
-  margin:0 0 34px;
+
+/* ---------- 2. Hero Headline ---------- */
+.hero-copy h1 {
+  font-family: var(--font-serif);
+  
+  /* THE FIX: Decreased from 4.375rem to 4rem (approx 64px) */
+  font-size: 4.375rem; 
+  
+  font-weight: 300; 
+  line-height: 1.15;
+  margin: 0 0 22px;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
 }
+
+/* ---------- 3. Hero Subtitle ---------- */
+.hero-copy p {
+  /* THE FIX: Decreased from 1.25rem to 1.125rem (approx 18px) */
+  font-size: 1rem; 
+  
+  font-weight: 400; 
+  line-height: 1.7;
+  color: var(--ink-600);
+  max-width: 480px; 
+  margin: 0 0 34px;
+}
+
 .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
 
 /* Phone mockup */
@@ -73,7 +90,7 @@
 .phone-mockup{
   position:relative;
   z-index:1;
-  width:300px;
+  width:400px;
   height:auto;
   display:block;
   filter:drop-shadow(0 30px 70px rgba(0,0,0,0.45));

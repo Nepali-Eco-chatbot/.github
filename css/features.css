@@ -15,17 +15,13 @@
   padding-bottom: 100px; /* Reduced from 160px for less empty space at the bottom */
 }
 
-/* THE FIX: Forcing the Key Features heading to perfectly center */
 #features .section-eyebrow {
   text-align: center;
   width: 100%;
-  display: block; /* Ensures the heading takes up the full width so text-align can work */
-  
-  /* Ensuring it uses our brand typography */
-  font-family: 'Outfit', sans-serif;
-  color: var(--forest-950); 
+  display: block; 
+  /* THE FIX: Deleted the font-family line from here so it inherits Fraunces from base.css */
+  color: var(--ink-900); 
 }
-
 .features-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);

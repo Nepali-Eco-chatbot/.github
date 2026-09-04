@@ -1,14 +1,17 @@
 /* =========================================================
    navbar.css — sticky top navigation
    ========================================================= */
-
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:var(--paper-white);
-  border-bottom:1px solid var(--line-dark);
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  /* THE FIX: Applying the pure white background token */
+  background: var(--nav-bg); 
+  
+  border-bottom: 1px solid var(--line-dark);
 }
+
 .navbar .container {
   display: flex;
   align-items: center;
@@ -26,15 +29,28 @@
   align-items:center;
   gap:38px;
 }
-.nav-links a{
-  color:var(--ink-600);
-  font-size:0.95rem;
-  font-weight:500;
-  transition:color .15s ease;
-  position:relative;
+/* ---------- 1. Unselected Links ---------- */
+.nav-links a {
+  /* THE FIX: Applying Work Sans Regular */
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400; 
+  
+  /* THE FIX: Your exact unselected color */
+  color: #6B756E; 
+  
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+  position: relative;
+  text-decoration: none;
 }
-.nav-links a:hover{ color:var(--ink-900); }
-.nav-links a.active{ color:var(--ink-900); }
+
+/* ---------- 2. Hover & Selected Links ---------- */
+/* By grouping these with a comma, they share the exact same styling! */
+.nav-links a:hover,
+.nav-links a.active {
+  /* THE FIX: Your exact selected/active color */
+  color: #1B3B2B; 
+}
 
 .nav-actions{ display:flex; align-items:center; gap:18px; }
 

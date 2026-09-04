@@ -1,9 +1,19 @@
 /* =========================================================
    base.css — variables, reset, typography, buttons, layout
    ========================================================= */
+:root {
+  /* --- Exact Section & Component Tokens --- */
+  --bg-hero-feature: #F8F6F0;   /* Hero & Feature Sections */
+  --bg-footer-rev: #0C1F15;     /* Footer & Join the Revolution Sections */
+  --bg-cta: #1B3B2B;            /* CTA Mountain Section */
+  --nav-bg: #ffffff;            /* Pure White Navbar */
+  
+  --btn-primary-bg: #52B788;    /* Chat Now Button Background */
+  --btn-primary-text: #ffffff;  /* Chat Now Button Text */
 
-:root{
-  --forest-950:#0a1a15;
+  /* (Keep your existing color and font variables here) */
+  --forest-950: #0a1a15;
+  --forest-900: #0d211b;
   --forest-900:#0d211b;
   --forest-800:#122b22;
   --forest-700:#173a2e;
@@ -25,6 +35,7 @@
   --font-display:'Manrope', 'Segoe UI', sans-serif;
   --font-serif:'Manrope', 'Segoe UI', sans-serif;
   --font-body:'Manrope', 'Segoe UI', sans-serif;
+  /* ... */
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -70,14 +81,19 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .btn:active{ transform:translateY(1px); }
 
-.btn-primary{
-  background:linear-gradient(180deg,var(--mint-400),var(--mint-600));
-  color:#06170f;
-  box-shadow:0 10px 24px rgba(46,204,130,0.35);
+/* ---------- Buttons ---------- */
+.btn-primary {
+  /* THE FIX: Replaced the gradient with your exact solid brand color and text color */
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  box-shadow: 0 10px 24px rgba(82, 183, 136, 0.35);
 }
-.btn-primary:hover{ box-shadow:0 14px 30px rgba(46,204,130,0.45); transform:translateY(-1px); }
 
-
+.btn-primary:hover {
+  background: #459e73; /* Slightly darker shade for tactile hover */
+  box-shadow: 0 14px 30px rgba(82, 183, 136, 0.45); 
+  transform: translateY(-1px); 
+}
 
 .btn-outline-dark{
   background:transparent;
@@ -133,16 +149,15 @@ button{ font-family:inherit; cursor:pointer; }
 .section-eyebrow {
   text-align: center;
   
-  /* The "Why": Applying our official brand font for all major headings */
-  font-family: 'Outfit', sans-serif; 
-  font-weight: 600;
+  /* THE FIX: Applying the beautiful Fraunces serif font */
+  font-family: 'Fraunces', serif; 
   
-  /* Bumping up the size to match the prominence in your mockup */
+  /* THE FIX: 400 is the exact numerical value for 'Regular' */
+  font-weight: 400;
+  
   font-size: 2.8rem; 
-  margin: 0 0 64px; /* Increased bottom margin for better breathing room */
-  
-  /* Using the Deep Forest brand color */
-  color: #0b1a13; 
+  margin: 0 0 64px; 
+  color: var(--ink-900); 
 }
 
 /* ---------- Shared brand lockup (navbar + footer) ---------- */
@@ -175,3 +190,4 @@ button{ font-family:inherit; cursor:pointer; }
   height: 100%; 
   object-fit: contain; 
 }
+
