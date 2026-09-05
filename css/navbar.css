@@ -85,6 +85,15 @@
   .nav-links.open{ display:flex; }
   .nav-toggle{ display:flex; }
   .nav-actions .btn{ display:none; }
+  .navbar .container {
+    padding: 6px 12px; /* Changes side padding from 32px to 16px */
+  }
+
+  /* THE FIX: Proportionally scale down the logo container for small screens */
+  .brand-mark {
+    width: 200px; /* Scaled down from 296px */
+    height: 46px; /* Scaled down from 68px */
+  }
 }
 
 /* =========================================================
