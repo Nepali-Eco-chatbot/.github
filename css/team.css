@@ -1,65 +1,124 @@
 /* =========================================================
    team.css — "Our Team" section
    ========================================================= */
+.team-section {
+  /* Acts as the anchor point for the absolute positioned vines */
+  position: relative; 
+  
+  /* THE FIX: Prevents the wide SVG from spilling over the edges on smaller screens */
+  overflow: hidden; 
+  
+  padding: 120px 0;
+}
 
-.team-section{
-  position:relative;
-  overflow:hidden;
-  padding:120px 0;
+
+/* Decorative Vines Image */
+/* Decorative Vines Image (Full Width) */
+.vines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  /* THE FIX: Makes the image fluidly span the entire width of the screen */
+  width: 100%; 
+  
+  /* THE FIX: Caps the growth so it never exceeds your original 1440px design width */
+  max-width: 1440px; 
+  
+  /* Automatically maintains your exact 696px height proportion */
+  height: auto; 
+  
+  /* Pushes it behind the cards and prevents it from blocking mouse clicks */
+  z-index: 0;
+  pointer-events: none; 
 }
 .team-decor{
   position:absolute;
-  z-index:0;
+  z-index:-5;
   pointer-events:none;
 }
 .team-decor.top-left{ top:-40px; left:-40px; width:280px; opacity:0.9; z-index:2; }
 .team-decor.line{ top:0; right:0; width:60%; opacity:0.5; }
 .team-section .container{ position:relative; z-index:1; }
-.team-section .section-eyebrow{ font-size:2.4rem; }
+.team-section .section-eyebrow {
+  /* THE FIX: Deleted the font-family line from here as well! */
+  font-size: 2.8rem; 
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 60px; 
+  margin-bottom: 72px; 
+  position: relative;
+  z-index: 2; 
+  color: var(--ink-900);
+}
+ .team-grid {
+  display: grid;
+  
+  /* THE FIX: We use a fixed width (270px) instead of 1fr to force identical sizes across all rows */
+  grid-template-columns: repeat(3, 270px);
+  gap: 28px;
+  
+  /* THE FIX: This centers the grid inside the container, beautifully utilizing the side space */
+  justify-content: center; 
+  margin: 0 auto 32px; 
+}
 
-.team-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-  max-width:980px;
-  margin:0 auto;
+/* The 2-Mentor Row (Top Row) */
+.team-grid.lead-row {
+  grid-template-columns: repeat(2, 270px);
+  margin-bottom: 48px; /* Added a little extra breathing room below the mentors */
 }
-.team-grid.lead-row{
-  grid-template-columns:repeat(2,1fr);
-  max-width:660px;
-  margin-bottom:28px;
+
+/* The 4-Developer Row (Bottom Row) */
+.team-grid.team-grid--four {
+  grid-template-columns: repeat(4, 270px);
 }
-.team-grid.team-grid--four{
-  grid-template-columns:repeat(4, minmax(0, 308px));
-  justify-content:center;
-  gap:28px;
-  width:100vw;
-  max-width:100vw;
-  margin-left:calc(50% - 50vw);
-  margin-right:calc(50% - 50vw);
-  margin-top:28px;
-  padding:0 32px;
-  box-sizing:border-box;
+
+
+/* We are upgrading the card to match the light Figma design */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  /* Pure white background as per the design */
+  background: #ffffff; 
+  
+  /* We remove the solid line border and replace it with a soft, widespread shadow 
+     to give it that premium "floating" effect */
+  border: none; 
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05); 
+  
+  /* Slightly more padding to let the content breathe, matching the spacious design */
+  padding: 24px; 
+  border-radius: var(--radius-lg);
+  text-align: left;
+  
+  /* Adding our tactile spring-bounce transition for when we hover */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+
+  min-height: 420px; /* THE FIX: Forces every card to be at least this tall, regardless of content */
 }
-.team-card{
-  display:flex;
-  flex-direction:column;
-  height:100%;
-  background:#fff;
-  border:1px solid var(--line-dark);
-  border-radius:var(--radius-lg);
-  padding:22px;
-  text-align:left;
-  box-shadow:var(--shadow-soft);
+
+/* Premium Hover Effect */
+.team-card:hover {
+  transform: translateY(-8px); /* Card floats up slightly */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08); /* Shadow gets slightly deeper */
 }
-.team-card img{
-  width:100%;
-  aspect-ratio:4/3;
-  object-fit:cover;
-  border-radius:var(--radius-md);
-  margin-bottom:16px;
-  background:var(--cream-200);
+
+/* Fixing the image proportions */
+.team-card img {
+  width: 100%;
+  
+  /* Changing from 4/3 to 1/1 makes the images perfectly square, just like the mockup! */
+  aspect-ratio: 1 / 1; 
+  
+  object-fit: cover; /* Ensures the image fills the square without stretching */
+  border-radius: var(--radius-md);
+  margin-bottom: 20px; /* Pushing the text a bit further down from the image */
 }
+
 .team-card-meta{
   display:flex;
   align-items:flex-start;
@@ -129,4 +188,21 @@
   margin-top:28px;
   padding:0 32px;
   box-sizing:border-box;
+}
+/* For tablets and smaller laptops */
+@media (max-width: 1200px){
+  /* The 4-card row gracefully drops into a 2x2 grid */
+  .team-grid.team-grid--four { 
+    grid-template-columns: repeat(2, 270px); 
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 720px){
+  /* All grids stack into a single column on small screens */
+  .team-grid, 
+  .team-grid.lead-row, 
+  .team-grid.team-grid--four { 
+    grid-template-columns: repeat(1, minmax(250px, 320px)); 
+  }
 }

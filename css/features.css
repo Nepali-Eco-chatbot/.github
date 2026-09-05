@@ -1,19 +1,54 @@
 /* =========================================================
    features.css — "Key Features" card grid
-   ========================================================= */
+   ========================================================= *
 
+/* THE FIX: Applying the exact same background as the Hero section */
+/* Apply a clean background and tighter section spacing */
+#features { 
+  
+  background: linear-gradient(180deg, var(--cream-100), var(--cream-200));
+    
+  margin-top: 0; 
+  
+  /* THE FIX: Decreased the padding to shrink the overall height of the section */
+  padding-top: 80px;    /* Reduced from 140px for a tighter top gap */
+  padding-bottom: 100px; /* Reduced from 160px for less empty space at the bottom */
+}
+
+#features .section-eyebrow {
+  text-align: center;
+  width: 100%;
+  display: block; 
+  /* THE FIX: Deleted the font-family line from here so it inherits Fraunces from base.css */
+  color: var(--ink-900); 
+}
 .features-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:26px;
 }
-.feature-card{
-  background:var(--paper-white);
-  border:1px solid var(--line-dark);
-  border-radius:var(--radius-lg);
-  padding:32px 28px;
-  box-shadow:var(--shadow-soft);
+
+.feature-card {
+  background: #ffffff; /* Pure white background as seen in the mockup */
+  
+  /* The "Why": Removing the hard border and replacing it with a soft shadow 
+     gives the card a premium, tactile feel against the cream background */
+  border: none; 
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04); 
+  
+  border-radius: var(--radius-lg);
+  padding: 40px 32px; /* Slightly more padding for an airy layout */
+  
+  /* Setting up the smooth spring-bounce transition for when users hover */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
+
+/* Premium Hover Effect */
+.feature-card:hover {
+  transform: translateY(-6px); /* Card lifts up gently */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08); /* Shadow deepens slightly */
+}
+
 .feature-icon{
   width:46px; height:46px;
   border-radius:12px;
