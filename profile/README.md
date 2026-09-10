@@ -1,5 +1,14 @@
-Welcome to Nepali Eco-Chatbot project!
 
+### Intro
+Nepali Eco chatbot is a whatsapp based chatbot created during the [Cosog Nepal's summercamp](https://summercamp.cosognepal.org/) program by team Nepali Eco Chatbot.It is a Rag based chatbot that is setup to answer the question on the basis of [data](https://data.nepaliecochat.bot/) collected during the program. This bot is created to simplify the overhead of understanding complex ecological research, and cryptic studies. The main target audience for this project are the researchers, students, and individuals that have varying experience and knowledge in the field of Ecology. This project aims to improve the overall environmental literacy and make people resolve their ecological queries.
+
+Since, this was developed during [Cosog Nepal's summercamp](https://summercamp.cosognepal.org/) as a educational project. Every aspect of this project is opensource and is designed to work as long as possible with little to no capital requirements. All the [design](https://design.nepaliecochat.bot/), [code](https://git.nepaliecochat.bot/), [data](https://data.nepaliecochat.bot/), [slides](https://slides.nepaliecochat.bot) are public and accessible.
+
+
+### Working
+
+
+### Team
 | Image                                                                                                        | Name              | Description                                                               |
 | ------------------------------------------------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------------------- |
 | <img src="/images/team/sarojregmi.png" alt="Saroj Regmi's image" height="120px" width="120px" />             | Saroj Regmi       | Mentor for the project, Web and mobile application developer              |
