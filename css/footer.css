@@ -2,48 +2,157 @@
    footer.css — site footer
    ========================================================= */
 
-.footer{
-  background:var(--forest-900);
-  color:rgba(255,255,255,0.7);
-  padding:60px 0 30px;
+.footer {
+  background: var(--forest-900);
+  color: rgba(255,255,255,0.7);
+  padding: 0px 0 0%;
 }
-.footer .container{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1fr;
-  gap:36px;
+
+/* 1. THE FIX: Targets ONLY the top link container using :first-of-type */
+.footer .container:first-of-type {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 36px;
+  
+  /* THE SANDWICH LINES */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Internal spacing (padding) prevents margin collapse! */
+  padding-top: 60px;
+  padding-bottom: 60px; 
+  
+  /* THE FIX: Deleted 'margin-top: 40px;' from here */
 }
-.footer .brand{ margin-bottom:10px; }
-.footer-tagline{ font-size:0.85rem; color:rgba(255,255,255,0.45); max-width:230px; line-height:1.6; }
-.footer h4{
-  color:#fff;
-  font-size:0.92rem;
-  margin:0 0 16px;
-  font-weight:600;
+
+/* 2. The Bottom Copyright Container */
+.footer .container.footer-bottom {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 4px;
+  
+  /* Removing the border here so we don't get double lines */
+  border-top: none; 
+  
+  padding-top: 24px; 
+  padding-bottom: 32px;
+  margin-top: 0px; 
+  
+  text-align: left; 
+  font-size: 0.8rem;
+  color: var(--text-muted); 
 }
-.footer ul li{ margin-bottom:10px; }
-.footer ul li a{ font-size:0.88rem; color:rgba(255,255,255,0.6); transition:color .15s; }
-.footer ul li a:hover{ color:var(--mint-400); }
-.footer-socials{ display:flex; gap:12px; margin-bottom:14px; }
-.footer-socials a{
-  width:32px; height:32px; border-radius:50%;
-  background:rgba(255,255,255,0.08);
-  display:grid; place-items:center;
-  font-size:0.85rem;
+
+/* /* Fixing the Logo Container (Fixed the missing slash here!) */
+.footer .brand {
+  display: inline-block;
+  margin-bottom: 16px;
+  text-decoration: none;
 }
-.footer-bottom{
-  margin-top:46px;
-  padding-top:24px;
-  border-top:1px solid rgba(255,255,255,0.08);
-  text-align:center;
-  font-size:0.8rem;
-  color:rgba(255,255,255,0.4);
+
+.footer-logo {
+  height: 20px; 
+  width: auto;  
+  display: block;
+  max-width: 100%; 
 }
+
+.footer-tagline { 
+  font-size: 0.85rem; 
+  color: rgba(255,255,255,0.45); 
+  max-width: 230px; 
+  line-height: 1.6; 
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 0.92rem;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.footer ul li { margin-bottom: 10px; }
+
+.footer ul li a { 
+  font-size: 0.88rem; 
+  color: rgba(255,255,255,0.6); 
+  transition: color .15s; 
+}
+
+.footer ul li a:hover { color: var(--mint-400); }
+
+.footer-socials { 
+  display: flex; 
+  gap: 12px; 
+  margin-bottom: 14px; 
+}
+
+.footer-socials a {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: grid; place-items: center;
+  font-size: 0.85rem;
+} 
+
+/* ---------- Footer Bottom Links ---------- */
+
+/* 2. The Bottom Copyright Container */
+.footer .container.footer-bottom {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 4px;
+  
+  border-top: none; 
+  padding-top: 24px; 
+  padding-bottom: 32px;
+  margin-top: 0px; 
+  text-align: left; 
+  
+  /* THE FIX: Reduced from 0.8rem to 0.7rem for that clean 'fine print' look */
+  font-size: 0.5rem; 
+  
+  color: var(--text-muted); 
+}
+
+.footer .container.footer-bottom a.footer-link {
+  color: var(--text-muted); 
+  text-decoration: underline; 
+  text-decoration-color: rgba(163, 196, 188, 0.3); 
+  text-underline-offset: 4px; 
+  transition: all 0.3s ease; 
+}
+
+/* Premium Tactile Hover */
+.footer .container.footer-bottom a.footer-link:hover {
+  color: var(--mint-400); 
+  text-decoration-color: var(--mint-400); 
+}
+
+/* =========================================================
+   Responsive Media Queries
+   ========================================================= */
 
 @media (max-width: 980px){
-  .footer .container{ grid-template-columns:1fr 1fr; }
+  /* Targeting the first container for tablets */
+  .footer .container:first-of-type { grid-template-columns: 1fr 1fr; }
 }
-
 @media (max-width: 720px){
-  .footer .container{ grid-template-columns:1fr; text-align:center; }
-  .footer-socials{ justify-content:center; }
+  /* Targeting the first container for phones */
+  .footer .container:first-of-type { grid-template-columns: 1fr; text-align: center; }
+  .footer-socials { justify-content: center; }
+  
+  /* Keeps the bottom section centered on small phones */
+  .footer .container.footer-bottom { flex-direction: column; gap: 16px; justify-content: center; } 
+  
+  /* =========================================
+     THE FIX: Centering the tagline boxes! 
+     ========================================= */
+  .footer-tagline { 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
 }
