@@ -1,19 +1,5 @@
 Welcome to Nepali Eco-Chatbot project!
 
-| Image                                        | Name        | Description                                                  |
-| -------------------------------------------- | ----------- | ------------------------------------------------------------ |
-| ![Saroj Regmi's image](image/sarojregmi.png) | Saroj Regmi | Mentor for the project, Web and mobile application developer |
-| ![Shrijan Poudel's image](image/shrijanpoudel.JPEG) | Shrijan Poudel | Co-Mentor for the project. Math & Tech enthusiast |
-| ![ Prajwal Bhandari's image](image/prajwalbhandari.jpeg) | Prajwal Bhandari| Mentee for the project. Learner, creator & changemaker|
-| ![Tanuj Shah's image](image/Tanuj.jpeg)               | Tanuj Shah        | Mentee for the project. Tech & Finance enthusiast            |
-| ![Aaditya Gaire's image](image/aadityagaire.jpg)      | Aaditya Gaire     | Mentee for the project, STEM enthusiast, Student             | 
-| ![Anurag's image](image/anuragkdl.jpeg)      | Anurag Kandel     | Mentee for the project, STEM enthusiast, Learner             | 
-| ![Akash's image](image/akashsingh.jpg) | Akash Singh | Mentee for the project Literary and tech enthusiast |
-| ![Shriya Shrestha's image](image/shriya.jpg) | Shriya Shrestha | Mentee for the project, Tech enthusiast |         
-| ![Dikshit's image](https://github.com/AKITO009.png) | Dikshit Sapkota| Mentee for the project, Grade 12 CS Student & Cybersecurity Enthusiast |
-
-
-
 ### Intro
 Nepali Eco chatbot is a whatsapp based chatbot created during the [Cosog Nepal's summercamp](https://summercamp.cosognepal.org/) program by team Nepali Eco Chatbot.It is a Rag based chatbot that is setup to answer the question on the basis of [data](https://data.nepaliecochat.bot/) collected during the program. This bot is created to simplify the overhead of understanding complex ecological research, and cryptic studies. The main target audience for this project are the researchers, students, and individuals that have varying experience and knowledge in the field of Ecology. This project aims to improve the overall environmental literacy and make people resolve their ecological queries.
 
