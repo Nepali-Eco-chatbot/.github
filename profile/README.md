@@ -1,3 +1,4 @@
+Welcome to Nepali Eco-Chatbot project!
 
 ### Intro
 Nepali Eco chatbot is a whatsapp based chatbot created during the [Cosog Nepal's summercamp](https://summercamp.cosognepal.org/) program by team Nepali Eco Chatbot.It is a Rag based chatbot that is setup to answer the question on the basis of [data](https://data.nepaliecochat.bot/) collected during the program. This bot is created to simplify the overhead of understanding complex ecological research, and cryptic studies. The main target audience for this project are the researchers, students, and individuals that have varying experience and knowledge in the field of Ecology. This project aims to improve the overall environmental literacy and make people resolve their ecological queries.
@@ -7,6 +8,23 @@ Since, this was developed during [Cosog Nepal's summercamp](https://summercamp.c
 
 ### Working
 
+Nepali Eco Chatbot uses a Retrieval-Augmented Generation (RAG) approach to answer ecological queries using the data collected.
+
+1. Data Collection: Ecological data is collected from reliable sources during the program.
+
+2. Data Processing: The collected data is processed and prepared so that relevant information can be retrieved when needed.
+
+3. User Query: A user sends an ecological question through WhatsApp.
+
+4. Information Retrieval: The system searches the knowledge base and retrieves information relevant to the user's question.
+
+5. Context Generation:  The retrieved information is provided to the AI as context.
+
+6. Response Generation: The AI generates an answer based on the user's question and the retrieved ecological information.
+
+7. Response Delivery: The generated answer is sent back to the user through WhatsApp.
+
+This approach helps the chatbot provide answers grounded in the ecological information collected for the project rather than relying solely on the AI's general knowledge. The data collection, processing, retrieval, and context generation components are handled in the [Nepali-Eco-chatbot/ragger](https://github.com/Nepali-Eco-chatbot/ragger) repository, while the user query, response generation, and response delivery components are handled in the [Nepali-Eco-chatbot/server](https://github.com/Nepali-Eco-chatbot/server) repository.
 
 ### Team
 | Image                                                                                                        | Name              | Description                                                               |
@@ -20,3 +38,4 @@ Since, this was developed during [Cosog Nepal's summercamp](https://summercamp.c
 | <img src="/images/team/akashsingh.jpg" alt="Akash's image" height="120px" width="120px" />                   | Akash Singh       | Mentee for the project Literary and tech enthusiast                       |
 | <img src="/images/team/shriya.jpg" alt="Shriya Shrestha's image" height="120px" width="120px" />             | Shriya Shrestha   | Mentee for the project, Tech enthusiast                                   |         
 | <img src="/images/team/dikshit.jpeg" alt="Dikshit's image" height="120px" width="120px" />                   | Dikshit Sapkota   | Mentee for the project, Grade 12 CS Student & Cybersecurity Enthusiast    |
+
